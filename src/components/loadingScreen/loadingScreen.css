@@ -1,0 +1,39 @@
+/* LoadingScreen.css */
+
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(
+        255,
+        255,
+        255,
+        0.7
+    ); /* Semi-transparent white background */
+    backdrop-filter: blur(10px); /* Background blur effect */
+    z-index: 1000; /* Ensure it appears above other content */
+}
+
+.logo {
+    width: 120;
+    height: 120px;
+    animation: blink 4s infinite;
+}
+
+@keyframes blink {
+    0%,
+    50%,
+    100% {
+        opacity: 1;
+    }
+    25%,
+    75% {
+        opacity: 0.1;
+    }
+}
